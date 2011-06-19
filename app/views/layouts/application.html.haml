@@ -1,0 +1,39 @@
+!!!
+%html
+	%head
+		%title
+			Автолитмаш
+		= stylesheet_link_tag 'reset', 'ie', 'screen', "scaffold.css", 'print', "jquery-ui-1.8.13.custom.css", 'main'
+		= javascript_include_tag :all, "jquery-ui-1.8.13.custom"
+		= csrf_meta_tag
+%body
+	#container
+		#header
+			#options
+				#logo
+					%img{src:'images/logo.png', height:'50px', style:"padding: '0'; margin: '0';"}
+				#page_name
+					%font.header= paste_current_page @current_page
+				#clear
+				#autoriz
+					- if current_user
+						-# Вы вошли как: 
+						= current_user.name
+						= link_to "выйти", log_out_path
+					- else
+						= link_to "вход", log_in_path
+		#columnLeft
+			.menu
+				%ul
+					- if current_user && current_user.can?('spec')
+						%li					
+							= link_to	'спецификации', specs_path
+					- if current_user
+						%li					
+							= link_to	'настройка', sign_up_path
+		#columnRight
+			- flash.each do |name, msg|
+				= content_tag :div, msg, :id => "flash_#{name}"
+			= yield
+		#footer
+			ООО "Автолитмаш"

@@ -1,0 +1,378 @@
+/* line 2, ../../app/stylesheets/main.scss */
+body {
+  font-family: Georgia, Times, serif;
+  color: black;
+}
+
+/* line 6, ../../app/stylesheets/main.scss */
+#container {
+  margin: 0 auto;
+  padding: 0;
+  border-right: 1px solid black;
+  width: 1000px;
+}
+
+/* line 15, ../../app/stylesheets/main.scss */
+#header {
+  position: relative;
+  height: 60px;
+  background-color: #1b008f;
+  border-bottom: 1px solid #333;
+}
+
+/* line 21, ../../app/stylesheets/main.scss */
+#logo {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+}
+
+/* line 26, ../../app/stylesheets/main.scss */
+#page_name {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  top: 20px;
+  left: 80px;
+}
+/* line 32, ../../app/stylesheets/main.scss */
+#page_name .header {
+  color: #ff7200;
+  font-size: 1.4em;
+  font-family: Verdana, sans-serif;
+  text-shadow: #b35000 0.1em 0.1em 0.1em;
+  font-weight: 900;
+}
+
+/* line 40, ../../app/stylesheets/main.scss */
+#clear {
+  clear: both;
+}
+
+/* line 43, ../../app/stylesheets/main.scss */
+#autoriz {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+}
+
+/* line 57, ../../app/stylesheets/main.scss */
+#columnLeft {
+  float: left;
+  width: 160px;
+  margin-left: 0;
+  padding-top: 5px;
+}
+
+/* line 63, ../../app/stylesheets/main.scss */
+#columnRight {
+  margin: 0 2em 0 200px;
+  padding-top: 1em;
+}
+
+/* line 67, ../../app/stylesheets/main.scss */
+#footer {
+  height: 30px;
+  clear: both;
+  background-color: #ccc;
+  border-top: 1px solid #333;
+  padding-top: 5px;
+  padding-left: 20px;
+}
+
+/* line 77, ../../app/stylesheets/main.scss */
+.fileTable {
+  display: none;
+  position: absolute;
+  margin-top: 30px;
+  margin-left: -80px;
+  padding: 5px;
+  border: 1px solid #66aaff;
+  color: #004499;
+  background-color: #cce3ff;
+}
+
+/* line 90, ../../app/stylesheets/main.scss */
+.menu ul li a {
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 85%;
+  color: #888;
+  line-height: 33px;
+  padding: 0 15px 0 8px;
+}
+
+/* line 100, ../../app/stylesheets/main.scss */
+.buttonSubmit {
+  width: 150px;
+  margin-right: 380px;
+  margin-left: auto;
+  float: right;
+}
+
+/* line 106, ../../app/stylesheets/main.scss */
+#mainFormInfo {
+  display: block;
+  float: left;
+}
+
+/* line 110, ../../app/stylesheets/main.scss */
+#dopFormInfo {
+  width: 280px;
+  height: 160px;
+  display: block;
+  float: left;
+  margin-left: 10px;
+}
+/* line 116, ../../app/stylesheets/main.scss */
+#dopFormInfo #dopButton {
+  text-decoration: none;
+  width: 20px;
+  font-weight: bold;
+  padding: 0;
+}
+
+/* line 123, ../../app/stylesheets/main.scss */
+#dopFormTags {
+  display: none;
+  padding: 0;
+  margin-left: 0;
+  margin-top: 10px;
+  margin-right: 0;
+  margin-bottom: 10px;
+}
+/* line 132, ../../app/stylesheets/main.scss */
+#dopFormTags label {
+  text-align: left;
+  width: 120px;
+  display: inline;
+  float: left;
+  margin: 0;
+  padding: 0;
+  height: 20px;
+}
+/* line 141, ../../app/stylesheets/main.scss */
+#dopFormTags input {
+  width: 20px;
+  height: 20px;
+  display: inline;
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 150, ../../app/stylesheets/main.scss */
+.shot {
+  display: block;
+  text-align: right;
+  width: 70px;
+  float: left;
+  margin-bottom: 10px;
+  height: 24px;
+}
+
+/* line 158, ../../app/stylesheets/main.scss */
+.checkbox {
+  width: 1em;
+}
+
+/* line 160, ../../app/stylesheets/main.scss */
+br {
+  clear: left;
+}
+
+/* line 162, ../../app/stylesheets/main.scss */
+#spisokLeft {
+  float: left;
+  width: 350px;
+  margin-left: 10px;
+  padding-top: 1em;
+}
+
+/* line 168, ../../app/stylesheets/main.scss */
+#spisokRight {
+  margin: 0 2em 0 350px;
+  padding-top: 1em;
+}
+
+/* line 172, ../../app/stylesheets/main.scss */
+table.user {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+/* line 175, ../../app/stylesheets/main.scss */
+table.user td {
+  padding: 5px;
+}
+/* line 177, ../../app/stylesheets/main.scss */
+table.user td .role {
+  text-align: center;
+  float: left;
+  width: 100px;
+  margin-left: 10px;
+}
+
+/* line 186, ../../app/stylesheets/main.scss */
+table.striping {
+  cursor: hand;
+}
+/* line 188, ../../app/stylesheets/main.scss */
+table.striping th {
+  background-color: #ccc;
+  text-align: center;
+  color: #090909;
+  padding: 3px;
+  border: 1px solid #e79605;
+}
+/* line 195, ../../app/stylesheets/main.scss */
+table.striping td {
+  color: #3c3c3c;
+  border: solid 1px #fde5bb;
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 3px;
+  padding-right: 50px;
+  background-color: #fde5bb;
+}
+/* line 206, ../../app/stylesheets/main.scss */
+table.striping td.created_at {
+  width: 60px;
+  text-align: center;
+  padding-left: 0;
+  padding-right: 0;
+}
+/* line 214, ../../app/stylesheets/main.scss */
+table.striping td.prod {
+  width: 100px;
+  padding: 0;
+  word-wrap: normal;
+  font-size: 0.7em;
+  text-align: center;
+}
+/* line 221, ../../app/stylesheets/main.scss */
+table.striping td.firm {
+  width: 400px;
+}
+/* line 222, ../../app/stylesheets/main.scss */
+table.striping td.price {
+  width: 100px;
+  padding-left: 0;
+  padding-right: 5px;
+  text-align: right;
+}
+/* line 230, ../../app/stylesheets/main.scss */
+table.striping td.user {
+  padding-left: 5px;
+  padding-right: 5px;
+  text-align: center;
+}
+/* line 237, ../../app/stylesheets/main.scss */
+table.striping td.file {
+  width: 100px;
+  padding-left: 0;
+  padding-right: 0;
+  text-align: center;
+}
+/* line 246, ../../app/stylesheets/main.scss */
+table.striping tr.over td {
+  border-top: solid 2px blue;
+  border-bottom: solid 2px blue;
+}
+/* line 250, ../../app/stylesheets/main.scss */
+table.striping tr.current td {
+  border-top: solid 2px #835503;
+  border-bottom: solid 2px #835503;
+}
+
+/* line 257, ../../app/stylesheets/main.scss */
+a:hover {
+  color: #ff7200;
+  background-color: #1b008f;
+}
+/* line 261, ../../app/stylesheets/main.scss */
+a:active {
+  color: blue;
+}
+/* line 263, ../../app/stylesheets/main.scss */
+a:link {
+  color: blue;
+}
+/* line 265, ../../app/stylesheets/main.scss */
+a:visited {
+  color: blue;
+}
+
+/* line 268, ../../app/stylesheets/main.scss */
+#box {
+  margin-left: 100px;
+  margin-bottom: 20px;
+  width: 40%;
+  background-color: #cccccc;
+  background-image: url("../images/corner_bl.gif");
+  background-repeat: no-repeat;
+  background-position: bottom left;
+}
+
+/* line 279, ../../app/stylesheets/main.scss */
+#head_outer {
+  background-color: #1b008f;
+  background-image: url("../images/corner_tl.gif");
+  background-repeat: no-repeat;
+}
+
+/* line 286, ../../app/stylesheets/main.scss */
+#head_inner {
+  padding-top: 7px;
+  padding-bottom: 7px;
+  background-image: url("../images/corner_tr.gif");
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+/* line 291, ../../app/stylesheets/main.scss */
+#head_inner h2 {
+  color: #ff7200;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* line 302, ../../app/stylesheets/main.scss */
+div form {
+  margin: 0;
+  padding: 7px;
+  background-image: url("../images/corner_br.gif");
+  background-repeat: no-repeat;
+  background-position: bottom right;
+}
+/* line 310, ../../app/stylesheets/main.scss */
+div form label {
+  display: block;
+  text-align: right;
+  float: left;
+  width: 75px;
+  padding-right: 10px;
+  padding-top: 3px;
+}
+/* line 320, ../../app/stylesheets/main.scss */
+div form input[type="password"] {
+  display: block;
+  width: 200px;
+  float: left;
+  margin-bottom: 10px;
+}
+/* line 326, ../../app/stylesheets/main.scss */
+div form input[type="text"] {
+  display: block;
+  width: 200px;
+  float: left;
+  margin-bottom: 10px;
+}
+/* line 332, ../../app/stylesheets/main.scss */
+div form input[type="submit"] {
+  display: block;
+  width: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5px;
+}

@@ -1,0 +1,40 @@
+$("#newSpec").html("<%= escape_javascript(
+render partial:'form', locals:{ spec:@spec } ) %>");
+$('#newSpec').animate({opacity: 'show', height:'show'}, 'slow');
+$('#newSpec form').submit(function() {		
+		$('#newSpec form').attr('method', 'post').attr('action', '/specs/create');		
+		$('#newSpec').animate({opacity: 'hide', height:'hide'}, 'slow');
+		$('.striping tr').removeClass('current');	
+	});
+	//
+	//снимаем выделение с выбранной спецификации
+	//
+	$('.striping tr').removeClass('current');
+	//
+	//отправка формы
+	//
+	$("#submitForm").click(function(){
+		var fName = $("#firm_name").val();
+		var sPrice = $("#spec_price").val();
+		if (fName == '')
+		{
+			$('#editInfo').html("<b>Укажите название организации!</b>");
+			$('#editInfo').fadeIn(2000).fadeOut(1000);
+			return false;
+		}
+		else if (sPrice == '')
+		{
+			$('#editInfo').html("<b>Укажите цену заказа!</b>");
+			$('#editInfo').fadeIn(2000).fadeOut(1000);
+			return false;
+		}
+	});
+	//
+	//
+	//
+	$("#dopButton").click(function() {
+		if ($("#dopFormTags").is(':visible')) { $("#dopFormTags").fadeOut(500); }
+		else { $("#dopFormTags").fadeIn(500); }
+		
+		return false;
+	});

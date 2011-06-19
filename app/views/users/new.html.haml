@@ -1,0 +1,29 @@
+
+#spisokLeft
+	- if current_user.role? :super_admin
+		%h1 Регистрация нового пользователя
+		%br/
+		= render partial:'form', locals:{ user:User.new } 
+	- else
+		%h1 Смена пароля
+		%br/
+		- if notice.present?
+			= notice
+		- form_tag ch_pass_path do
+			= label_tag :name, 'новый пароль:', style:' padding-left: -20; margin-left: 0;'
+			= password_field_tag :pass, params[:pass], style:' width: 260px; '
+			%br/
+			= submit_tag "сохранить", style:'margin-left:80px; margin-top: 10px; width:100px;'
+#spisokRight
+	%h1 Перечень сотрудников организации
+	%table.user
+		- User.all.each do |user|
+			%tr
+				%td
+					- if current_user.can? :user
+						= link_to 'ред.', edit_user_path(user.id), remote: 'true'
+				%td
+					= user.name
+				%td
+					- user.roles.each do |role|
+						.role= role.name

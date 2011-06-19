@@ -1,0 +1,341 @@
+$borderColor: #fbc057;
+body {
+	font-family: Georgia, Times, serif;
+	color: black;
+}
+#container {
+	margin: 0 auto;
+	padding: 0;
+	border-right: 1px solid black;
+	width: 1000px;
+}
+$headerColor: #1b008f; //#888;
+$headerText: #ff7200;
+$footerColor: #ccc;
+#header {
+	position: relative;
+	height: 60px;	
+	background-color: $headerColor;
+	border-bottom: 1px solid #333;
+}
+#logo {
+	position: absolute;
+	top: 5px;
+	left: 10px;
+}
+#page_name {
+	position: absolute;
+	margin: 0; 
+	padding: 0;
+	top: 20px;
+	left: 80px;
+	.header {
+		color: $headerText;//darken($headerColor, 30%);
+		font-size: 1.4em; 
+		font-family: Verdana, sans-serif;
+		text-shadow: darken($headerText, 15%) .1em .1em .1em;
+		font-weight: 900; 
+	}	
+}
+#clear {
+	clear: both;
+}
+#autoriz {
+		//display:block;
+		position: absolute;
+		top: 20px;
+		right: 30px;
+		// 20px 15px 20px 8px;	
+		//float: right;	
+}
+#options {
+		//float: left;
+		//display:block;
+		//padding: 0;		
+		//text-align: left;
+}
+#columnLeft {
+	float: left;
+	width: 160px;
+	margin-left: 0;
+	padding-top: 5px;
+}
+#columnRight {
+	margin: 0 2em 0 200px;
+	padding-top: 1em;
+}
+#footer {
+	height: 30px;
+	clear: both;
+	background-color: #ccc;
+	border-top: 1px solid #333;
+	padding: {
+		top: 5px;		
+		left: 20px;
+	}
+}
+.fileTable {
+	display: none;
+	$col: #6af;
+	position: absolute;
+	margin: {
+		top: 30px;
+		left: -80px;		
+	}
+	padding: 5px;
+	border: 1px solid $col;
+	color: darken($col, 40%);
+	background-color: lighten($col, 20%);
+}
+.menu ul li a {
+	display: block;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 85%;
+	color: #888;
+	line-height: 33px;
+	padding: 0 15px 0 8px;
+}
+.buttonSubmit {
+		width: 150px;
+		margin-right: 380px;
+		margin-left: auto;
+		float: right;
+}
+#mainFormInfo {
+	display: block;
+	float: left;
+}
+#dopFormInfo {
+	width: 280px;
+	height: 160px;
+	display: block;
+	float: left;
+	margin-left: 10px;
+	#dopButton {
+		text-decoration: none;
+		width: 20px;
+		font-weight: bold;
+		padding: 0;
+	}
+}
+#dopFormTags {
+	display: none;
+	padding: 0;
+	margin: {
+		left: 0;
+		top: 10px;
+		right: 0;
+		bottom: 10px;
+	}
+	label { 
+		text-align: left;
+		width: 120px; 
+		display: inline;		
+		float: left;
+		margin: 0;
+		padding: 0;	
+		height: 20px;			
+	}	
+	input { 
+		width: 20px; 	
+		height: 20px;			
+		display: inline;		
+		float: left;
+		margin: 0;
+		padding: 0;			
+	}
+}
+.shot { 
+	display: block;
+	text-align: right;	
+	width: 70px;
+	float: left;
+	margin-bottom: 10px;		
+	height: 24px;
+}
+.checkbox {	width: 1em; }
+
+br { clear: left; }
+
+#spisokLeft {
+	float: left;
+	width: 350px;
+	margin-left: 10px;
+	padding-top: 1em;
+}
+#spisokRight {
+	margin: 0 2em 0 350px;
+	padding-top: 1em;
+}
+table.user {
+	margin-top: 20px;
+	margin-left: 20px;
+	td {	
+		padding: 5px;
+		.role {
+			text-align: center;
+			float: left;		
+			width: 100px;
+			margin-left: 10px;
+		}
+	}
+}
+$txtColor: #888;
+table.striping {
+	cursor: hand;			
+	th {
+		background-color: #ccc;
+		text-align: center;
+		color: darken($txtColor, 50%);
+		padding: 3px;
+		border: 1px solid darken($borderColor, 20%);
+	}
+	td {
+		color: darken($txtColor, 30%);
+		border: solid 1px lighten($borderColor, 20%);	
+		padding:{
+				left: 10px;
+				top: 5px;
+				bottom: 3px;
+				right: 50px;
+			}
+		background-color: lighten($borderColor, 20%);		
+	}
+	td.created_at { 
+		width: 60px; 
+		text-align: center; 
+		padding: {
+			left: 0;
+			right: 0;
+		}
+	}
+	td.prod {
+		width: 100px;
+		padding: 0;
+		word-wrap: normal;
+		font-size: 0.7em;
+		text-align: center;
+	}
+	td.firm { width: 400px; }
+	td.price { 
+		width: 100px;
+		padding: {
+			left: 0;
+			right: 5px;
+		}
+		text-align: right; 
+	}
+	td.user {
+		padding: {
+			left: 5px;
+			right: 5px;
+		}
+		text-align: center;
+	}
+	td.file { 
+		width: 100px; 
+		padding: {
+			left: 0;
+			right: 0;
+		}
+		text-align: center; 
+	}
+	
+	tr.over td { 
+		border-top: solid 2px blue; 
+		border-bottom: solid 2px blue;//darken($borderColor, 50%); 
+	}
+	tr.current td {	
+		border-top: solid 2px darken($borderColor, 40%); 
+		border-bottom: solid 2px darken($borderColor, 40%); 
+	}
+}
+$linkColor: #00f;
+a {
+	&:hover {
+		color: $headerText;	
+		background-color: $headerColor;
+	}
+	&:active {
+		color: darken($linkColor, 0%); }
+	&:link {
+		color: darken($linkColor, 0%);	}
+	&:visited {
+		color: darken($linkColor, 0%);	}
+}
+#box {
+	margin-left: 100px;
+	margin-bottom: 20px;
+	width: 40%;
+	background: {
+		color: $footerColor;
+		image: url('../images/corner_bl.gif');
+		repeat: no-repeat;
+		position: bottom left;
+	}
+}
+#head_outer {	
+	background: {
+		color: $headerColor;
+		image: url('../images/corner_tl.gif');
+		repeat: no-repeat;
+	}
+}
+#head_inner {
+	padding: {
+		top: 7px;
+		bottom: 7px;
+	}
+	h2 {
+		color: $headerText;
+		text-align: center;
+		font-weight: bold;
+	}
+	background: {
+		image: url('../images/corner_tr.gif');
+		repeat: no-repeat;
+		position: top right;
+	}
+}
+div form {
+	margin: 0;
+	padding: 7px;
+	background: {
+		image: url('../images/corner_br.gif');
+		repeat: no-repeat;
+		position: bottom right;
+	}
+	label {
+		display: block;
+		text-align: right;
+		float: left;
+		width: 75px;
+		padding: {
+			right: 10px;	
+			top: 3px;
+		}		
+	}
+	input[type="password"] {
+			display: block;
+			width: 200px;
+			float: left;
+			margin-bottom: 10px;
+	}
+	input[type="text"] {
+			display: block;
+			width: 200px;
+			float: left;
+			margin-bottom: 10px;
+	}
+	input[type="submit"] {
+			display: block;
+			width: 100px;
+			margin: {
+				left: auto;
+				right: auto;
+			}
+			margin-bottom: 5px;
+	}
+}

@@ -1,0 +1,13 @@
+#box
+	#head_outer
+		#head_inner
+			%h2 Для входа используйте имя и пароль
+	%br/
+	- form_tag sessions_path do
+		= label_tag :name, 'Имя:'
+		= text_field_tag :name, params[:name]
+		%br/
+		= label_tag :pass, 'Пароль:'
+		= password_field_tag :pass
+		%br/
+		= submit_tag "вход"

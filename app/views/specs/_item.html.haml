@@ -1,0 +1,12 @@
+%td.created_at{ style:"background-color: ##{spec.user.color};" }
+	= spec.created_at.strftime("%d.%m.%y %H:%M")
+%td.firm{ style:"background-color: ##{spec.user.color};" }
+	= truncate(spec.firm.name, length:25, omission:'...')
+%td.prod{ style:"background-color: ##{spec.user.color};" }
+	= paste_obrab(spec)
+%td.price{ style:"background-color: ##{spec.user.color};" }
+	= spec.price
+%td.user{ style:"background-color: ##{spec.user.color};" }
+	= spec.user == nil ? '' : spec.user.name
+%td.file{ style:"background-color: ##{spec.user.color};" }
+	!= paste_file_url spec

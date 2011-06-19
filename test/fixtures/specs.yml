@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  tender: 
+  price: 1.5
+
+two:
+  tender: 
+  price: 1.5

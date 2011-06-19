@@ -1,0 +1,38 @@
+#hideShow
+	- form_for(Spec.new, url:specs_show_path, remote:'true' ) do |f|
+		#artNum
+			= f.text_field :id
+		= f.submit( id:'subNum' )
+			
+#editInfo
+	информация
+
+#newObject
+
+#showInfo
+	#panelButtons
+		= link_to('Добавить спецификацию', specs_new_path, remote:'true', id:'newID', class:'editButtons')
+		=# link_to('Удалить спецификацию', specs_path, id:'destroyID', class:'editButtons')
+	%hr/
+	#newSpec
+	%table.striping#specTable{width:'100%'}
+		%tr#specHeader
+			%th
+				Дата
+			%th
+				Организация
+			%th
+				Продукция
+			%th
+				Цена заказа
+			%th
+				Менеджер
+			%th
+				Расчет
+		- @specs.each do |spec|
+			%tr{ id:spec.id }
+				= render partial:'item', locals:{ spec:spec }
+#f
+	%hr/
+	#editForm
+		= render( partial:'form', :locals => { spec:Spec.new } )

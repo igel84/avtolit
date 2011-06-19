@@ -1,0 +1,16 @@
+- form_tag @spec == nil ? specs_create_path : specs_update_path, remote:'true', :multipart => true do
+	= hidden_field(:spec, :id, :value => @spec == nil ? '' : @spec.id)
+	= label :file, "Файл спецификации:"
+	= file_field :spec, :file
+	%br/
+	=# hidden_field(:firm, :id, :value => @spec == nil ? '' : @spec.firm.id)
+	= label(:name, 'Название организации:')
+	= text_field(:firm, :name, :value => @spec == nil ? '' : @spec.firm != nil ? @spec.firm.name : '')
+	%br/
+	= label(:price, 'Стоимость:')
+	= text_field(:spec, :price, class: 'shot')
+	= label(:tender, 'Тендер:', style:"text-align:right")
+	= check_box(:spec, :tender, class: 'checkbox')
+	-# style:"text-align:left")
+	%br/
+	%input{:type=>'submit', :value=>'сохранить', class:'buttonSubmit'}

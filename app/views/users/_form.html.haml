@@ -1,0 +1,19 @@
+- form_for @user do |f|
+	- if @user.errors.any?
+		.error_messages
+			%h2 Ошибка при заполнении
+			%ul
+			- for message in @user.errors.full_messages
+				%li= message
+	= f.label :name, 'Имя пользователя'
+	= f.text_field :name
+	%br/
+	= f.label :pass, 'Пароль'
+	= f.password_field :pass
+	%br/
+	- for role in Role.find(:all, :order => "name")
+		= label_tag role.name
+		= check_box_tag "user[role_id][]", role.id, @user.roles.include?(role), class:'checkbox'
+		%br/
+	%br/
+	= f.submit 'сохранить', style:'margin-left:80px; margin-top: 10px; width:100px;'

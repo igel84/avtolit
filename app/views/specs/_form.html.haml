@@ -1,0 +1,34 @@
+- form_tag @spec == nil ? specs_create_path : specs_update_path, remote:'true', :multipart => true do
+	= hidden_field(:spec, :id, :value => @spec == nil ? '' : @spec.id)
+	=# hidden_field(:firm, :id, :value => @spec == nil ? '' : @spec.firm.id)
+	#mainFormInfo
+		= label(:name, 'Название организации:', style:"padding-left:0; padding-right:10px; display:block; float:left; width:130px; ")
+		= text_field(:firm, :name, :value => @spec == nil ? '' : @spec.firm != nil ? @spec.firm.name : '',  style:"padding: 0; display:block; float:left; width:320px; height: 20px;")
+		%br/
+		= label(:price, 'Цена заказа:', style:"padding-left:0; padding-right:10px; display:block; float:left; width:130px; ")
+		= text_field(:spec, :price, class: 'shot', style:"padding: 0; display:block; float:left; width:80px; height: 20px;")
+		= file_field :calc, :file, value:'выбрать файл', style:"margin-left: 10px;  margin-top: 0; margin-bottom: 0; padding: 0; display:block; float:left; width:180px; height: 20px;"
+		-# style:"text-align:left")
+		%br/
+		%input{:type=>'submit', :value=>'сохранить спецификацию', class:'buttonSubmit', id:'submitForm', style:"margin-top:40px; margin-right:10px; width:180px;" }		
+	#dopFormInfo
+		%a{ href: '#', id:'dopButton' } дополнительно
+		#dopFormTags
+			= check_box(:spec, :tender, class: 'checkbox')
+			= label(:tender, 'Тендер', style:"text-align:left;")
+			%br/
+			%hr/
+			= check_box(:spec, :bronza, class: 'checkbox')
+			= label(:bronza, 'Бронза')
+			= check_box(:spec, :chugun, class: 'checkbox')
+			= label(:chugun, 'Чугун')
+			%br/
+			%hr/
+			= check_box(:spec, :meh_no, class: 'checkbox')
+			= label(:meh_no, 'Без мех обработки')
+			= check_box(:spec, :meh_yes, class: 'checkbox')
+			= label(:meh_yes, 'C мех обработкой')
+			%br
+			%hr
+			= check_box(:spec, :cher_yes, class: 'checkbox')
+			= label(:cher_yes, 'С мех обработкой по чертежу', style:'width: 200px;')

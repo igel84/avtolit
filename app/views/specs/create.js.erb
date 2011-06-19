@@ -1,0 +1,7 @@
+$('#editInfo').html("<%= @message %>");
+$('#editInfo').fadeIn(1000).fadeOut(1000);
+<% if @spec != nil && @spec.id != nil %>
+$("<tr id='<%= @spec.id %>' class=''><%= escape_javascript(
+render partial:'item', locals:{ spec:@spec } ) %></tr>").insertAfter("#specHeader")
+<% end %>
+$("#<%= @spec.id %>").animatesTable();
